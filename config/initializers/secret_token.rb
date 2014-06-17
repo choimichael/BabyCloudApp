@@ -9,4 +9,20 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-BabyCloudApp::Application.config.secret_key_base = '92429ba15096ecac64848e7812592faf5c57549bdd09185eb80bc43c53bccc43eeb3a5011c28e3be1052958133a7ff1ae63080cc287f2eeac70d81239b520ee4'
+
+require 'securerandom'
+
+def secure_token
+  token_file = Rails.root.join('.secret')
+  if File.exist?(token_file)
+    # Use the existing token.
+    File.read(token_file).chomp
+  else
+    # Generate a new token and store it in token_file.
+    token = SecureRandom.hex(64)
+    File.write(token_file, token)
+    token
+  end
+end
+
+BabyCloudApp::Application.config.secret_key_base = secure_token
