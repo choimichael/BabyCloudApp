@@ -19,8 +19,8 @@ describe "StaticPages" do
   describe "Navbar should be available" do
     it "should show the navigation on the home page" do
       visit '/static_pages/home'
-      expect(page).should have_link('Sign In')
-      expect(page).should have_link('Sign Up')
+      expect(page).to have_link('Sign In')
+      expect(page).to have_link('Sign Up')
     end
   end
 end
