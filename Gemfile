@@ -6,6 +6,14 @@ gem 'rails', '4.0.4'
 # Use postgresql as the database for Active Record
 gem 'pg'
 
+gem 'devise'
+
+gem 'omniauth-facebook'
+
+gem "paperclip", "~> 4.1"
+
+gem 'aws-sdk'
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.2'
 gem 'bootstrap-sass', '~> 3.1.1'
@@ -53,6 +61,7 @@ group :test do
   gem 'shoulda-matchers', require: false
 end
 
-gem 'devise'
+
+
 
 
