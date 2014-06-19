@@ -1,5 +1,13 @@
 BabyCloudApp::Application.routes.draw do
 
+  get "posts/index"
+  get "posts/grid"
+  get "posts/show"
+  get "posts/new"
+  get "posts/edit"
+  get "posts/create"
+  get "posts/update"
+  get "posts/destroy"
   devise_for :admins
   # get "static_pages/home"
   get "static_pages/about"
