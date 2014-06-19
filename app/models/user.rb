@@ -4,6 +4,8 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable, :omniauthable, :omniauth_providers => [:facebook]
 
+  has_many :posts
+
   has_attached_file :avatar, :styles => { 
   	:medium => "300x300>", :thumb => "50x50>" }
 
