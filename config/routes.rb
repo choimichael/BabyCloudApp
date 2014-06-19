@@ -1,5 +1,6 @@
 BabyCloudApp::Application.routes.draw do
 
+  devise_for :admins
   # get "static_pages/home"
   get "static_pages/about"
 
