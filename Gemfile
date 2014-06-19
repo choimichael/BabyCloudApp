@@ -12,6 +12,8 @@ gem 'omniauth-facebook'
 
 gem "paperclip", "~> 4.1"
 
+gem 'exifr'
+
 gem 'aws-sdk'
 
 gem 'rails_12factor'
