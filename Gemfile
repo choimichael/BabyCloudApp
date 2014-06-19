@@ -12,6 +12,8 @@ gem 'omniauth-facebook'
 
 gem "paperclip", "~> 4.1"
 
+gem 'jquery-fileupload-rails'
+
 gem 'exifr'
 
 gem 'aws-sdk'
