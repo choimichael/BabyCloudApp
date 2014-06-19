@@ -1,0 +1,35 @@
+<div class="container">
+	
+	<%= form_for @post, :html => { :multipart => true } do |f| %>
+			
+			<% if @post.errors.any? %>
+				<div id="error_explanation">
+					<h2><%= pluralize(@post.errors.count, "error") %> prohibited this article from being saved:</h2>
+					<ul>
+					<% @post.errors.full_messages.each do |msg| %>
+						<li><%= msg %></li>
+					<% end %>
+					</ul>
+				</div>
+			<% end %>
+
+			<div class="well well-md">
+
+				<!-- Input title of the image -->
+				<h2>From</h2>
+				<%= f.text_field :title, class: "form-control" %>
+		
+				<!-- Upload Image -->
+				
+				<%= f.file_field :image %>
+				
+				
+				<!-- Input description of the image -->
+				<h2>Dear Baby Oliver</h2>
+				<%= f.text_area :description, size: "30x10", class: "form-control" %>
+
+				<%= f.submit "Upload", class: "btn btn-success" %>
+			</div>
+	<% end %>
+
+</div>
