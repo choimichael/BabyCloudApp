@@ -16,38 +16,38 @@
 			<div class="row fileupload-buttonbar">
 	      <div class="span7">
 
+          <span class="btn btn-success fileinput-button">
+          <i class="icon-plus icon-white"></i>
+          <span>Add files...</span> 
+          <%= f.file_field :image %>
+          </span>
+
+          <button type="submit" class="btn btn-primary start">
+          <i class="icon-upload icon-white"></i>
+          <span>Start upload</span>
+          </button>
+          
+          <button type="reset" class="btn btn-warning cancel">
+          <i class="icon-ban-circle icon-white"></i>
+          <span>Cancel upload</span>
+          </button>
+          
+          <button type="button" class="btn btn-danger delete">
+          <i class="icon-trash icon-white"></i>
+          <span>Delete</span>
+          </button>
+
 					<!-- Input title of the image -->
-					<h2>From</h2>
+					<h2>Title</h2>
 					<%= f.text_field :title, class: "form-control" %>
 			
 					<!-- Upload Image -->
+					<h2>Description</h2>
+					<%= f.text_field :description, size: "30x10", class: "form-control" %>
+          
+          
 					
-					<%= f.text_area :description, size: "30x10", class: "form-control" %>
-					<span class="btn btn-success fileinput-button">
-          <i class="icon-plus icon-white"></i>
-          <span>Add files...</span> 			<!--- Add Files -->
-          <%= f.file_field :image %>
-        	</span>
-
-					<!-- <%#= f.file_field :image %>
-					 -->
-					
-					<!-- Input description of the image -->
-					<h2>Dear Baby Oliver</h2>
-					
-					<button type="submit" class="btn btn-primary start">
-          <i class="icon-upload icon-white"></i>
-          <span>Start upload</span>
-        </button>
-        <button type="reset" class="btn btn-warning cancel">
-          <i class="icon-ban-circle icon-white"></i>
-          <span>Cancel upload</span>
-        </button>
-        <button type="button" class="btn btn-danger delete">
-          <i class="icon-trash icon-white"></i>
-          <span>Delete</span>
-        </button>
-        <input type="checkbox" class="toggle">
+        
       </div>
       <div class="span5">
         <!-- The global progress bar -->

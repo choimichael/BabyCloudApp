@@ -8,10 +8,11 @@ class Post < ActiveRecord::Base
       :medium   => ['250x250',    :jpg, :convert_options => "-auto-orient"],
       :large    => ['600x600>',   :jpg, :convert_options => "-auto-orient"]
     }
+  validates_attachment_content_type :image, :content_type => /\Aimage\/.*\Z/
+		
+    before_post_process :load_exif
 
-		before_post_process :load_exif
-
-    validates_attachment_content_type :image, :content_type => /\Aimage\/.*\Z/
+    
   	validates_attachment_presence :image
 
   	def to_jq_upload

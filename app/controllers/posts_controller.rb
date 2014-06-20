@@ -34,7 +34,7 @@ class PostsController < ApplicationController
   end
 
   def destroy
-    @post.update(post_params)
+    @post.destroy
     redirect_to @post, notice: 'Post was deleted'
   end
 
