@@ -31,6 +31,11 @@ gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .js.coffee assets and views
 gem 'coffee-rails', '~> 4.0.0'
 
+group :assets do
+  gem 'less-rails'
+  gem 'therubyracer', :platforms => :ruby
+end
+
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
@@ -67,6 +72,7 @@ group :test do
   gem 'shoulda-matchers', require: false
 end
 
+gem 'dropzonejs-rails'
 
 
 

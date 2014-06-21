@@ -3,7 +3,7 @@ BabyCloudApp::Application.routes.draw do
   resources :posts 
   devise_for :admins
   # get "static_pages/home"
-  get "static_pages/about"
+  # get "static_pages/about"
 
   devise_for :users
 

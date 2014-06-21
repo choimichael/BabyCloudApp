@@ -11,5 +11,6 @@
  *= require bootstrap.min
  *= require_self
  *= require jquery.fileupload-ui
+ *= require dropzone
  *= require_tree .
  */
