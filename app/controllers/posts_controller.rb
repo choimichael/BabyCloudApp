@@ -33,6 +33,11 @@ class PostsController < ApplicationController
   end
 
   def update
+    if @post.update_attributes(post_params)
+      redirect_to posts_path
+    else
+      render 'edit'
+    end
   end
 
   def destroy
@@ -47,6 +52,6 @@ class PostsController < ApplicationController
   end
 
   def post_params
-    params.require(:post).permit(:image)
+    params.require(:post).permit(:title, :description, :image)
   end
 end
