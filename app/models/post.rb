@@ -15,15 +15,6 @@ class Post < ActiveRecord::Base
     
   	validates_attachment_presence :image
 
-  	def to_jq_upload
-	    {
-	      "name" => read_attribute(:image_file_name),
-	      "size" => read_attribute(:image_file_size),
-	      "url" => image.url(:original),
-	      "delete_url" => post_path(self),
-	      "delete_type" => "DELETE" 
-	    }
-  	end
 
   	def load_exif
   		exif = EXIFR::JPEG.new(image.queued_for_write[:original].path)

@@ -14,4 +14,5 @@
 //= require jquery_ujs
 //= require jquery-fileupload
 //= require bootstrap.min
+//= require dropzone.min
 //= require_tree .

@@ -24,9 +24,11 @@ class PostsController < ApplicationController
   def create
     @post = current_user.posts.new(post_params)
     if @post.save
-      redirect_to posts_path, notice: 'Post was successfully created'
+      render json: { message: "success" }, :status => 200
     else
-      render :new
+      #  you need to send an error header, otherwise Dropzone
+      #  will not interpret the response as an error:
+      render json: { error: @post.errors.full_messages.join(',')}, :status => 400
     end
   end
 
@@ -45,6 +47,6 @@ class PostsController < ApplicationController
   end
 
   def post_params
-    params.require(:post).permit(:title, :description, :image)
+    params.require(:post).permit(:image)
   end
 end
