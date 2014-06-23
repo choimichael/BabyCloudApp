@@ -17,6 +17,9 @@ class User < ActiveRecord::Base
   #     :large    => ['600x600>',   :jpg, :convert_options => "-auto-orient"]
   #   }
 
-  validates_attachment_content_type :avatar, :content_type => /\Aimage\/.*\Z/
- 
+  validates_attachment    :avatar,
+                          presence: true,
+                          content_type: { content_type: /\Aimage\/.*\Z/ },
+                          size: { less_than: 2.megabyte }
+
 end

@@ -4,7 +4,7 @@ class PostsController < ApplicationController
 
   # GET /articles
   def index
-    @posts = Post.all
+    @posts = Post.all.reverse
   end
 
   def grid
@@ -22,7 +22,7 @@ class PostsController < ApplicationController
   end
 
   def create
-    @post = current_user.posts.new(post_params)
+    @post = Post.new(post_params)
     if @post.save
       render json: { message: "success" }, :status => 200
     else
@@ -52,6 +52,6 @@ class PostsController < ApplicationController
   end
 
   def post_params
-    params.require(:post).permit(:title, :description, :image)
+    params.require(:post).permit(:image)
   end
 end
