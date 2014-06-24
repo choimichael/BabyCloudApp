@@ -1,11 +1,12 @@
 <div class="container">
 	<div class="row">
 		
-		<div class="col-md-8">
+		<div class="col-md-7">
+			<div class="thumbnail img-responsive">
 					<% if @post.image_content_type %>
-						<%= image_tag @post.image.url, class: "img-responsive" %>
+						<%= image_tag @post.image.url, class: "img-responsive"%>
 					<% end %>
-				
+			</div>	
 		</div>
 
 		<div class="col-md-4">
@@ -14,7 +15,7 @@
 					<%= @post.title %>
 					<hr>
 							
-					<h3>Description</h3>
+					<h3>Description</h3> 
 					<%= @post.description %>
 					<hr>
 
