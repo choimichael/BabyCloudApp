@@ -7,31 +7,30 @@
 		<% @posts.each do |post| %>
 				
 					<%= link_to (post) do %>
-						<% if post.image_content_type %>
+						<%# if post.image_content_type %>
 					
 					<div class="item col-xs-4">
             <div class="thumbnail img-responsive">
                 <%= image_tag post.image.url %>
                 
-                <div class="caption">
+                <div class="hover-description">
 
-                	<%= form_for post, :html => { :multipart => true } do |f| %>
+                	
                     
-                    <!-- <h4>Title</h4>
-											<h5><%#= post.title %></h5>
+                    
+											<h5><%= post.title %></h5>
 					
-										<h4>Description</h4>
-											<h5><%#= post.description %></h5>
-                    <h4>Date</h4>
-                    <h5><%#= post.date %></h5> -->
-                  
-                  <% end %>
+										
+											<h5><%= post.description %></h5>
+                    
+                    <h5><%= post.date %></h5> 
+
 
                 </div>
             </div>
         </div>
 
-						<% end %>
+						<%# end %>
 					<% end %>
 		<% end %>
 			

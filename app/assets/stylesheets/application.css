@@ -15,6 +15,30 @@
  *= require_tree .
  */
 
+.hover-description {
+  background: rgba(225, 225, 225, 0.6);
+  position: absolute;
+  top: 20px;
+  left: 40px;
+  bottom: 40px;
+  right: 40px;
+  text-align: center;
+  color: black;
+  -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: alpha(opacity=0);
+  opacity: 0;
+  -webkit-transition: opacity 0.4s ease-in-out;
+  -moz-transition: opacity 0.4s ease-in-out;
+  -ms-transition: opacity 0.4s ease-in-out;
+  -o-transition: opacity 0.4s ease-in-out;
+  transition: opacity 0.4s ease-in-out;
+}
+
+.hover-description:hover {
+  opacity: 0.9;
+}
+
+
 /* Isotope Transitions
 ------------------------------- */
 .isotope,
