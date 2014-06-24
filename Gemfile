@@ -20,6 +20,8 @@ gem 'exifr'
 
 gem 'aws-sdk'
 
+gem 'gmaps4rails'
+
 gem 'rails_12factor'
 
 # Use SCSS for stylesheets

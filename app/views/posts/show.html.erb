@@ -1,29 +1,39 @@
 <div class="container">
-	
-	<div class="row text-center">
-			
-
-		<% if @post.image_content_type %>
-				<%= image_tag @post.image.url, class: "img-responsive" %>
-
-	</div>
-
-<!-- 	<div class="col-md-"></div> -->
-		<div class="col-md-3">
-			<%= link_to 'Edit', edit_post_path, class: "btn btn-success"%>
-			<%= link_to 'Delete', @post, {method: :delete, data: {confirm: "Are you sure you want to delete this adorable photo?"}, class: "btn btn-danger"} %>
-			<% end %>
+	<div class="row">
 		
-		
-			<%= form_for @post, :html => { :multipart => true } do |f| %>
-
-					<h3>From</h3>
-					<%= @post.title %>
-							
-					<h3>Dear Baby Oliver</h3>
-					<%= @post.description %>
+		<div class="col-md-8">
+					<% if @post.image_content_type %>
+						<%= image_tag @post.image.url, class: "img-responsive" %>
+					<% end %>
 				
-				<% end %>
-			
-			</div>
+		</div>
+
+		<div class="col-md-4">
+
+					<h3>Title</h3>
+					<%= @post.title %>
+					<hr>
+							
+					<h3>Description</h3>
+					<%= @post.description %>
+					<hr>
+
+					<h3>Author</h3>
+					<%= current_user.email %>
+					<hr>
+
+					<h3>Date</h3>
+                    <%= @post.date %>
+					<hr>
+
+					<%= @post.latitude %>
+					<%= @post.longitude %>
+
+					<br>
+					<%= link_to 'Edit', edit_post_path, class: "btn btn-success"%>
+					<%= link_to 'Delete', @post, {method: :delete, data: {confirm: "Are you sure you want to delete this adorable photo?"}, class: "btn btn-danger"} %>
+
+		</div>
+		
+	</div>
 </div>
