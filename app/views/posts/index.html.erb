@@ -6,29 +6,10 @@
 
 		<% @user_posts.each do |post| %>
 				
-					<%= link_to (post) do %>
+					<%= link_to (post.date ? year_posts_path(:year => Date.parse(post.date).year) : no_year_path) do %>
 						<%# if post.image_content_type %>
 					
-					<div class="item col-md-3">
-            <div class="thumbnail img-responsive">
-                <%= image_tag post.image.url %>
-                
-                <div class="hover-description">
-
-                	
-                    
-                    
-											<h5><%= post.title %></h5>
-					
-										
-											<h5><%= post.description %></h5>
-                    
-                    <h5><%= post.date %></h5> 
-
-
-                </div>
-            </div>
-        </div>
+            <%= render :partial => 'grid_post', :locals => { post: post } %>
 
 						<%# end %>
 					<% end %>
