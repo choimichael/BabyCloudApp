@@ -7,7 +7,6 @@ class UsersController < ApplicationController
   end
 
   def show
-    @posts = @user.posts.reverse
   end
 
   def edit

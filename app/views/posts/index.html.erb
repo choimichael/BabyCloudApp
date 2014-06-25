@@ -4,12 +4,12 @@
 
 	<div id="posts" class="row">
 
-		<% @posts.each do |post| %>
+		<% @user_posts.each do |post| %>
 				
 					<%= link_to (post) do %>
 						<%# if post.image_content_type %>
 					
-					<div class="item col-xs-4">
+					<div class="item col-md-3">
             <div class="thumbnail img-responsive">
                 <%= image_tag post.image.url %>
                 

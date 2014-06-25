@@ -4,7 +4,8 @@ class PostsController < ApplicationController
 
   # GET /articles
   def index
-    @posts = Post.all.reverse
+    @posts = Post.all
+    @user_posts = current_user.posts.reverse
   end
 
   def grid
@@ -23,6 +24,7 @@ class PostsController < ApplicationController
 
   def create
     @post = Post.new(post_params)
+    @post.user_id = current_user.id
     if @post.save
       render json: { message: "success" }, :status => 200
     else
