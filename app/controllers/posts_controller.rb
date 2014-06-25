@@ -24,6 +24,7 @@ class PostsController < ApplicationController
   def create
     @post = Post.new(post_params)
     @post.user_id = current_user.id
+    @post.username = current_user.username
     if @post.save
       render json: { message: "success" }, :status => 200
     else
