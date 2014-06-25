@@ -20,20 +20,21 @@
 					<hr>
 
 					<h3>Author</h3>
-					<%= current_user.email %>
+					<%= @post.user_id %>
 					<hr>
 
 					<h3>Date</h3>
-                    <%= @post.date %>
+          <%= @post.date %>
 					<hr>
 
 					<%= @post.latitude %>
 					<%= @post.longitude %>
 
 					<br>
+					<% if (@post.user_id == current_user.id) %>
 					<%= link_to 'Edit', edit_post_path, class: "btn btn-success"%>
 					<%= link_to 'Delete', @post, {method: :delete, data: {confirm: "Are you sure you want to delete this adorable photo?"}, class: "btn btn-danger"} %>
-
+					<% end %>
 		</div>
 		
 	</div>

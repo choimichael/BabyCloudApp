@@ -4,12 +4,11 @@ class PostsController < ApplicationController
 
   # GET /articles
   def index
-    @posts = Post.all
     @user_posts = current_user.posts.reverse
   end
 
   def grid
-    @posts = Post.all
+    @posts = Post.all.reverse
   end
 
   def show

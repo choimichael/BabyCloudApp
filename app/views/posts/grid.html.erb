@@ -1,2 +1,36 @@
-<h1>Posts#grid</h1>
-<p>Find me in app/views/posts/grid.html.erb</p>
+<div class="container-fluid">
+
+  <div id="posts" class="row">
+
+    <% @posts.each do |post| %>
+        
+          <%= link_to (post) do %>
+            <%# if post.image_content_type %>
+          
+          <div class="item col-md-3">
+            <div class="thumbnail img-responsive">
+                <%= image_tag post.image.url %>
+                
+                <div class="hover-description">
+
+                  
+                    
+                    
+                      <h5><%= post.title %></h5>
+          
+                    
+                      <h5><%= post.description %></h5>
+                    
+                    <h5><%= post.date %></h5> 
+
+
+                </div>
+            </div>
+        </div>
+
+            <%# end %>
+          <% end %>
+    <% end %>
+      
+  </div>
+</div>
