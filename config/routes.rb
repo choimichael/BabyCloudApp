@@ -1,6 +1,9 @@
 BabyCloudApp::Application.routes.draw do
 
   resources :posts 
+  get '/years/:year' => "posts#months", :as => "year_posts"
+  get '/years/:year/:month' => "posts#single_month", :as => "month_posts"
+  get '/no_year' => "posts#no_year", :as => "no_year"
   devise_for :admins
   # get "static_pages/home"
   # get "static_pages/about"

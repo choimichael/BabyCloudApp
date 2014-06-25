@@ -4,7 +4,22 @@ class PostsController < ApplicationController
 
   # GET /articles
   def index
-    @user_posts = current_user.posts.reverse
+    post_ids = current_user.posts.select("MAX(id)").group("date_part('year', date(date))")
+    @user_posts = Post.where(:id => post_ids).order("date DESC")
+  end
+
+  def months
+    post_ids = current_user.posts.select("MAX(id)").group("date_part('month', date(date))").where("date_part('year', date(date)) = ?", params[:year])
+    @user_posts = Post.where(:id => post_ids).order("date DESC")
+  end
+
+  def single_month
+    @user_posts = current_user.posts.where("date_part('year', date(date)) = ?", params[:year]).where("date_part('month', date(date)) = ?", params[:month]).order("date DESC")
+  end
+
+  def no_year
+    @user_posts = current_user.posts.where(:date => nil).order("created_at DESC")
+    render 'single_month'
   end
 
   def grid
