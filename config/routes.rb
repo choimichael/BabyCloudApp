@@ -1,5 +1,5 @@
 BabyCloudApp::Application.routes.draw do
-
+  
   resources :posts 
   get '/years/:year' => "posts#months", :as => "year_posts"
   get '/years/:year/:month' => "posts#single_month", :as => "month_posts"
