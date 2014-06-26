@@ -1,4 +1,4 @@
-<div class="container-fluid">
+<div class="container">
 
   <div id="posts" class="row">
 
@@ -7,7 +7,7 @@
           <%= link_to (post) do %>
             <%# if post.image_content_type %>
           
-          <div class="item col-md-3">
+          <div class="item col-md-2">
             <div class="thumbnail img-responsive">
                 <%= image_tag post.image.url %>
                 
@@ -19,7 +19,7 @@
                       <h5><%= post.title %></h5>
           
                     
-                      <h5><%= post.description %></h5>
+                      <!-- <h5><%= post.description %></h5> -->
                     
                     <h5><%= post.date %></h5> 
 

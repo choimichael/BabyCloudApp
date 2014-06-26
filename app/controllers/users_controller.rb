@@ -10,7 +10,7 @@ class UsersController < ApplicationController
   end
 
   def edit
-  end
+  end 
 
   def update
 
@@ -20,7 +20,7 @@ class UsersController < ApplicationController
   	@user = User.new(user_params)
   	if @user.save
   		flash[:sucess] = "Signed Up Successfully"
-  		redirect_to :root
+  		redirect_to explore_path
   	else
   		render :new
   	end

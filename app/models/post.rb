@@ -21,8 +21,8 @@ class Post < ActiveRecord::Base
 
   		# Return if exif.nil? or not exif.exif?
   		self.date = exif.date_time.to_date
-  		self.latitude = exif.gps.latitude
-  		self.longitude = exif.gps.longitude
+  		# self.latitude = exif.gps.latitude
+  		# self.longitude = exif.gps.longitude
   	rescue
   		false
   	end
