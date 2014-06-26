@@ -15,6 +15,8 @@
 //= require jquery-fileupload
 //= require bootstrap.min
 //= require dropzone.min
+//= require skrollr
+//= require skrollr.menu
 //= require_tree .
 
 
