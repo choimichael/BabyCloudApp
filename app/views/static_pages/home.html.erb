@@ -1,35 +1,36 @@
 <section id="slide-1">
 	<div class="slide1 home">
-		<div class="cloud"
-	    data-center="bottom: 200px; opacity: 0"
-      data-top="bottom: 200px; opacity: 1"
-      data-anchor-target="#slide-1"
+		<div
+	    data-center="opacity: 1"
+	    data-center-top="opacity: 1"
+	    data--150-bottom="opacity: 0;"
+	    data-anchor-target="#slide-1"
     >
     	<div class="container">
 		    <div class="row">
 		      <div class="col-xs-4 col-sm-4 col-md-4">
 		        <h1>Share your baby photos with family and friends today!</h1>
 		        <p>Join the community.</p>
-		        <%= link_to "Upload your first photo", new_user_registration_path, class: "btn btn-info btn-lg" %>
+		        <%= link_to "Join Baby Cloud", new_user_registration_path, class: "btn btn-info btn-lg" %>
 		      </div>
 		    </div>
+      	<img id="cloud1" src="assets/cloudsmall.png">
 	  	</div>
-      <img id="cloud1" src="assets/cloudnew.png">
 	  </div>
 	</div>
 </section>
 
 <section id="slide-2">	
 	<div class="slide2 home">
-		<div class="cloud"
+		<div
 	    data-center="opacity: 1"
 	    data-center-top="opacity: 1"
-	    data--100-bottom="opacity: 0;"
+	    data--300-bottom="opacity: 0;"
 	    data-anchor-target="#slide-2"
 	  >
 	  	<div class="timeline">
-				<p>Timeline Gallery</p>
-				<%= link_to "Capture your memories", new_user_registration_path, class: "btn btn-info btn-lg" %>
+				<p>Organize and sort your photos</p>
+				<%= link_to "Upload your first photo", new_user_registration_path, class: "btn btn-info btn-lg" %>
 			</div>
 	    <img id="cloud2" src="assets/cloudnew.png">
 	  </div>
