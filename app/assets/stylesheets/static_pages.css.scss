@@ -18,11 +18,88 @@
 
 .slide2 {
 	background: url(screenshot.png) no-repeat center center fixed; 
-	
 	background-size: 80%;
+}
+
+.slide3 {
+	background-color: red;
+	padding-top: 20%;
+	padding-bottom: 20%;
+	text-align: center;
 }
 
 .btn {
   margin-top: 20px;
 	color: white;
+}
+
+#cloud1 {
+	margin-left: 20%;
+	margin-top: -10%;
+}
+
+#cloud2 {
+	margin-top: 5%;
+	margin-left: 60%;
+}
+
+.timeline {
+	height: 300px;
+	padding-top: 70px;
+	margin-top: 10px;
+	background-color: rgba(255, 255, 255, 0.6);
+	text-align: center;
+	font-size: 50px;
+	font-weight: bold;
+}
+
+.connect1 {
+	background-image: url('Mary1.png');
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+  border: 1px solid #bdbdbd;
+  border-radius: 100%;
+  -moz-border-radius: 100%;
+  -webkit-border-radius: 100%;
+  height: 200px;
+  width: 200px;
+  overflow: auto;
+  text-align: center;
+  display: inline-block;
+}
+
+.connect2 {
+	background-image: url('Will1.png');
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+  border: 1px solid #bdbdbd;
+  border-radius: 100%;
+  -moz-border-radius: 100%;
+  -webkit-border-radius: 100%;
+  height: 200px;
+  width: 200px;
+  overflow: auto;
+  text-align: center;
+  display: inline-block;
+}
+
+.connect3 {
+	background-image: url('Phoebe1.png');
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+  border: 1px solid #bdbdbd;
+  border-radius: 100%;
+  -moz-border-radius: 100%;
+  -webkit-border-radius: 100%;
+  height: 200px;
+  width: 200px;
+  overflow: auto;
+  text-align: center;
+  display: inline-block;
 }

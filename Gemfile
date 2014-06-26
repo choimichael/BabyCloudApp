@@ -20,6 +20,8 @@ gem 'exifr'
 
 gem 'aws-sdk'
 
+gem 'skrollr-rails'
+
 gem 'gmaps4rails'
 
 gem 'rails_12factor'
