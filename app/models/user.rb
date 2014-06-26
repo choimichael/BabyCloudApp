@@ -18,7 +18,7 @@ class User < ActiveRecord::Base
   #   }
 
   validates_attachment    :avatar,
-                          presence: true,
+                          # presence: true,
                           content_type: { content_type: /\Aimage\/.*\Z/ },
                           size: { less_than: 2.megabyte }
 
