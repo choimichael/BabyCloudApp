@@ -12,9 +12,7 @@ class Post < ActiveRecord::Base
 		
     before_post_process :load_exif
 
-    
   	validates_attachment_presence :image
-
 
   	def load_exif
   		exif = EXIFR::JPEG.new(image.queued_for_write[:original].path)

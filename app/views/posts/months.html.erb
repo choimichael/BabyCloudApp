@@ -1,20 +1,12 @@
-
-
 <div class="container">
-
   <div id="posts" class="row">
-
-    <% @user_posts.each do |post| %>
-        
-          <%= link_to month_posts_path(:year => Date.parse(post.date).year, :month => Date.parse(post.date).month) do %>
-            <%# if post.image_content_type %>
-          
-            <%= render :partial => 'grid_post', :locals => { post: post } %>
-
-            <%# end %>
-          <% end %>
-    <% end %>
+    <% @user_posts.each do |post| %>     
+      <%= link_to month_posts_path(:year => Date.parse(post.date).year, :month => Date.parse(post.date).month) do %>
       
+       <%= render :partial => 'grid_post', :locals => { post: post } %>
+
+      <% end %>
+    <% end %>  
   </div>
 </div>
 

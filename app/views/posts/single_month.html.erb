@@ -1,20 +1,12 @@
-
-
 <div class="container">
-
   <div id="posts" class="row">
-
     <% @user_posts.each do |post| %>
-        
-          <%= link_to (post) do %>
-            <%# if post.image_content_type %>
-          
-            <%= render :partial => 'grid_post', :locals => { post: post } %>
+	    <%= link_to (post) do %>
+	    
+	      <%= render :partial => 'grid_post', :locals => { post: post } %>
 
-            <%# end %>
-          <% end %>
-    <% end %>
-      
+	    <% end %>
+    <% end %>   
   </div>
 </div>
 
