@@ -1,0 +1,19 @@
+// Place all the styles related to the Comments controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.square-image-50 {
+  height: 40px;
+  width: 40px;
+  overflow: hidden;
+  text-align: center;
+}
+
+.comment-content {
+	margin-top: 5px;
+}
+
+.comment-date {
+	font-size: 11px;
+	margin-top: 5px;
+}
