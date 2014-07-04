@@ -22,4 +22,9 @@ class User < ActiveRecord::Base
                           content_type: { content_type: /\Aimage\/.*\Z/ },
                           size: { less_than: 2.megabyte }
 
+  acts_as_follower
+  acts_as_followable
+  acts_as_liker
+  acts_as_mentionable
+
 end
