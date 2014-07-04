@@ -89,7 +89,6 @@ ActiveRecord::Schema.define(version: 20140703214450) do
     t.float    "latitude"
     t.float    "longitude"
     t.string   "username"
-    t.text     "content" # NEED TO DELETE THIS
   end
 
   create_table "users", force: true do |t|
