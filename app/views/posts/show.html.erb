@@ -10,7 +10,7 @@
 
 		<div class="col-md-4">
 			<h3>By</h3>
-			<%= @post.username %>
+			<%= link_to @post.username, @post.user %>
 			<hr>
 
 			<h3>Title</h3>
@@ -28,7 +28,7 @@
 			<h3>Comments</h3>
       <% @post.comments.each do |comment| %>
       	<%= image_tag comment.user.avatar.url, class: "square-image-50" %>
-				<%= link_to comment.user.username %>
+				<%= link_to comment.user.username, comment.user %>
 				<div class="comment-content">
 					<%= comment.content %>
 				</div>

@@ -5,6 +5,7 @@ BabyCloudApp::Application.routes.draw do
   get '/years/:year' => "posts#months", :as => "year_posts"
   get '/years/:year/:month' => "posts#single_month", :as => "month_posts"
   get '/no_year' => "posts#no_year", :as => "no_year"
+
   devise_for :admins
 
   resources :comments
@@ -12,6 +13,7 @@ BabyCloudApp::Application.routes.draw do
   # get "static_pages/about"
 
   devise_for :users
+  resources :users, only: [:show]
   get '/explore' => "posts#grid"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
