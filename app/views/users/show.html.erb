@@ -1,0 +1,22 @@
+
+
+<div class="container">
+  <div id="posts" class="row">
+
+    <% @posts.each do |post| %>        
+      <%= link_to (post) do %>
+      <div class="item col-md-2">
+        <div class="thumbnail img-responsive">
+          <%= image_tag post.image.url %>
+          <div class="hover-description">
+              <h5><%= post.title %></h5>
+              <!-- <h5><%= post.description %></h5> -->
+              <h5><%= post.date %></h5> 
+          </div>
+        </div>
+      </div>
+      <% end %>
+    <% end %>
+      
+  </div>
+</div>
