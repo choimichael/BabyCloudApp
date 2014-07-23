@@ -14,3 +14,6 @@ Baby Cloud is a photo upload, organization, and sharing web app with a focus on 
 - Skrollr
 - Rspec/Rails
 
+#Authors
+-Michael Choi & Clarence Dang
+
